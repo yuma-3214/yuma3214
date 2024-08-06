@@ -3,51 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Personal Site</title>
+    <title>スポーツコーチ・アナリスト</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>My Personal Site</h1>
+        <h1>スポーツコーチ・アナリストのブログ</h1>
         <nav>
             <ul>
-                <li><a href="#blog">Blog</a></li>
-                <li><a href="#todo">TO DO</a></li>
-                <li><a href="#notes">Notes</a></li>
-                <li><a href="#mindmap">Mind Map</a></li>
+                <li><a href="#blog">ブログ</a></li>
+                <li><a href="#todo">TO DOリスト</a></li>
+                <li><a href="#notes">メモ</a></li>
+                <li><a href="#mindmap">マインドマップ</a></li>
             </ul>
         </nav>
     </header>
     <main>
         <section id="blog">
-            <h2>Blog</h2>
+            <h2>ブログ</h2>
             <ul id="blog-list">
                 <!-- NoteのURLをここに追加します -->
             </ul>
         </section>
         <section id="todo">
-            <h2>TO DO List</h2>
-            <input type="text" id="new-task" placeholder="New task">
-            <button onclick="addTask()">Add Task</button>
+            <h2>TO DOリスト</h2>
+            <input type="text" id="new-task" placeholder="新しいタスクを追加">
+            <button onclick="addTask()">追加</button>
             <ul id="todo-list">
                 <!-- タスクをここに表示します -->
             </ul>
         </section>
         <section id="notes">
-            <h2>Notes</h2>
-            <textarea id="note-area" placeholder="Write your notes here..."></textarea>
+            <h2>メモ</h2>
+            <textarea id="note-area" placeholder="ここにメモを入力..."></textarea>
         </section>
         <section id="mindmap">
-            <h2>Mind Map</h2>
+            <h2>マインドマップ</h2>
             <!-- マインドマップのJavaScriptライブラリを使用 -->
             <div id="mindmap-container"></div>
         </section>
     </main>
+    <footer>
+        <p>&copy; 2024 スポーツコーチ・アナリスト</p>
+    </footer>
     <script>
         // Blog Section
         const blogList = document.getElementById('blog-list');
         const blogs = [
-            { title: "My first post", url: "https://note.com/yourblog1" },
-            { title: "Another post", url: "https://note.com/yourblog2" }
+            { title: "スポーツ心理学の基礎", url: "https://note.com/yourblog1" },
+            { title: "効果的なコーチング方法", url: "https://note.com/yourblog2" }
         ];
 
         blogs.forEach(blog => {
@@ -72,7 +76,7 @@
             });
 
             const deleteBtn = document.createElement('button');
-            deleteBtn.textContent = 'Delete';
+            deleteBtn.textContent = '削除';
             deleteBtn.addEventListener('click', () => {
                 li.remove();
             });
@@ -84,3 +88,4 @@
     </script>
 </body>
 </html>
+
