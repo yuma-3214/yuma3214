@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Site</title>
+</head>
+<body>
+    <header>
+        <h1>My Personal Site</h1>
+        <nav>
+            <ul>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#todo">TO DO</a></li>
+                <li><a href="#notes">Notes</a></li>
+                <li><a href="#mindmap">Mind Map</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="blog">
+            <h2>Blog</h2>
+            <ul id="blog-list">
+                <!-- NoteのURLをここに追加します -->
+            </ul>
+        </section>
+        <section id="todo">
+            <h2>TO DO List</h2>
+            <input type="text" id="new-task" placeholder="New task">
+            <button onclick="addTask()">Add Task</button>
+            <ul id="todo-list">
+                <!-- タスクをここに表示します -->
+            </ul>
+        </section>
+        <section id="notes">
+            <h2>Notes</h2>
+            <textarea id="note-area" placeholder="Write your notes here..."></textarea>
+        </section>
+        <section id="mindmap">
+            <h2>Mind Map</h2>
+            <!-- マインドマップのJavaScriptライブラリを使用 -->
+            <div id="mindmap-container"></div>
+        </section>
+    </main>
+    <script>
+        // Blog Section
+        const blogList = document.getElementById('blog-list');
+        const blogs = [
+            { title: "My first post", url: "https://note.com/yourblog1" },
+            { title: "Another post", url: "https://note.com/yourblog2" }
+        ];
+
+        blogs.forEach(blog => {
+            const li = document.createElement('li');
+            const a = document.createElement('a');
+            a.href = blog.url;
+            a.textContent = blog.title;
+            li.appendChild(a);
+            blogList.appendChild(li);
+        });
+
+        // TO DO List Section
+        function addTask() {
+            const newTaskInput = document.getElementById('new-task');
+            const taskText = newTaskInput.value;
+            if (taskText === '') return;
+
+            const li = document.createElement('li');
+            li.textContent = taskText;
+            li.addEventListener('click', () => {
+                li.classList.toggle('completed');
+            });
+
+            const deleteBtn = document.createElement('button');
+            deleteBtn.textContent = 'Delete';
+            deleteBtn.addEventListener('click', () => {
+                li.remove();
+            });
+            li.appendChild(deleteBtn);
+
+            document.getElementById('todo-list').appendChild(li);
+            newTaskInput.value = '';
+        }
+    </script>
+</body>
+</html>
