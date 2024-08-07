@@ -1,13 +1,13 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #f0f2f5;
 }
 
 header {
-    background: linear-gradient(90deg, #1e90ff, #00bfff);
+    background: linear-gradient(90deg, #00416A, #E4E5E6);
     color: #fff;
     padding: 20px 0;
     text-align: center;
@@ -23,6 +23,7 @@ nav ul {
     padding: 0;
     display: flex;
     justify-content: center;
+    margin: 20px 0 0;
 }
 
 nav ul li {
@@ -42,16 +43,23 @@ nav ul li a:hover {
 
 main {
     padding: 20px;
+    max-width: 800px;
+    margin: auto;
 }
 
 section {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin-bottom: 40px;
+    padding: 20px;
 }
 
 h2 {
     color: #333;
-    border-bottom: 2px solid #1e90ff;
+    border-bottom: 2px solid #00416A;
     padding-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 input[type="text"], textarea {
@@ -63,7 +71,7 @@ input[type="text"], textarea {
 }
 
 button {
-    background: #1e90ff;
+    background: #00416A;
     color: #fff;
     border: none;
     padding: 10px 15px;
@@ -73,7 +81,7 @@ button {
 }
 
 button:hover {
-    background: #00bfff;
+    background: #006494;
 }
 
 ul {
@@ -82,13 +90,14 @@ ul {
 }
 
 ul li {
-    background: #fff;
+    background: #f9f9f9;
     padding: 10px;
     margin-bottom: 5px;
-    border: 1px solid #ccc;
+    border: 1px solid #ddd;
     border-radius: 4px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 ul li.completed {
@@ -119,4 +128,3 @@ footer {
     width: 100%;
     bottom: 0;
 }
-
