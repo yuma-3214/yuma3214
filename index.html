@@ -15,6 +15,7 @@
                 <li><a href="#todo">TO DO List</a></li>
                 <li><a href="#notes">Notes</a></li>
                 <li><a href="#mindmap">Mind Map</a></li>
+                <li><a href="#books">Books</a></li>
                 <li>
                     <a href="https://twitter.com/yuma0509_hand" target="_blank">
                         <img src="twitter-icon.png" alt="Twitter" class="social-icon">
@@ -36,17 +37,13 @@
     <main>
         <section id="blog">
             <h2>Blog</h2>
-            <ul id="blog-list">
-                <!-- NoteのURLをここに追加します -->
-            </ul>
+            <ul id="blog-list"></ul>
         </section>
         <section id="todo">
             <h2>TO DO List</h2>
             <input type="text" id="new-task" placeholder="Add a new task">
             <button onclick="addTask()">Add</button>
-            <ul id="todo-list">
-                <!-- Tasks will be displayed here -->
-            </ul>
+            <ul id="todo-list"></ul>
         </section>
         <section id="notes">
             <h2>Notes</h2>
@@ -55,6 +52,18 @@
         <section id="mindmap">
             <h2>Mind Map</h2>
             <p><a href="https://www.mindmeister.com/app/folders" target="_blank">Open Mind Map</a></p>
+        </section>
+        <section id="books">
+            <h2>Books</h2>
+            <h3>Recommended Books</h3>
+            <ul id="recommended-books-list"></ul>
+            <input type="text" id="new-recommended-book" placeholder="Add a recommended book URL">
+            <button onclick="addRecommendedBook()">Add</button>
+
+            <h3>Books to Read</h3>
+            <ul id="books-to-read-list"></ul>
+            <input type="text" id="new-book-to-read" placeholder="Add a book to read URL">
+            <button onclick="addBookToRead()">Add</button>
         </section>
     </main>
     <footer>
@@ -98,6 +107,40 @@
 
             document.getElementById('todo-list').appendChild(li);
             newTaskInput.value = '';
+        }
+
+        // Recommended Books Section
+        function addRecommendedBook() {
+            const newRecommendedBookInput = document.getElementById('new-recommended-book');
+            const bookURL = newRecommendedBookInput.value;
+            if (bookURL === '') return;
+
+            const li = document.createElement('li');
+            const a = document.createElement('a');
+            a.href = bookURL;
+            a.textContent = bookURL;
+            a.target = '_blank';
+            li.appendChild(a);
+
+            document.getElementById('recommended-books-list').appendChild(li);
+            newRecommendedBookInput.value = '';
+        }
+
+        // Books to Read Section
+        function addBookToRead() {
+            const newBookToReadInput = document.getElementById('new-book-to-read');
+            const bookURL = newBookToReadInput.value;
+            if (bookURL === '') return;
+
+            const li = document.createElement('li');
+            const a = document.createElement('a');
+            a.href = bookURL;
+            a.textContent = bookURL;
+            a.target = '_blank';
+            li.appendChild(a);
+
+            document.getElementById('books-to-read-list').appendChild(li);
+            newBookToReadInput.value = '';
         }
     </script>
 </body>
