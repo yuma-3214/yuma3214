@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,35 +11,50 @@
         <h1>yuma32 Private Site</h1>
         <nav>
             <ul>
-                <li><a href="#blog">ブログ</a></li>
-                <li><a href="#todo">TO DOリスト</a></li>
-                <li><a href="#notes">メモ</a></li>
-                <li><a href="#mindmap">マインドマップ</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#todo">TO DO List</a></li>
+                <li><a href="#notes">Notes</a></li>
+                <li><a href="#mindmap">Mind Map</a></li>
+                <li>
+                    <a href="https://twitter.com/yuma0509_hand" target="_blank">
+                        <img src="twitter-icon.png" alt="Twitter" class="social-icon">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://x.gd/L0RIj" target="_blank">
+                        <img src="instagram-icon.png" alt="Instagram" class="social-icon">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.facebook.com/yuuma.mitsuishi" target="_blank">
+                        <img src="facebook-icon.png" alt="Facebook" class="social-icon">
+                    </a>
+                </li>
             </ul>
         </nav>
     </header>
     <main>
         <section id="blog">
-            <h2>ブログ</h2>
+            <h2>Blog</h2>
             <ul id="blog-list">
                 <!-- NoteのURLをここに追加します -->
             </ul>
         </section>
         <section id="todo">
-            <h2>TO DOリスト</h2>
-            <input type="text" id="new-task" placeholder="新しいタスクを追加">
-            <button onclick="addTask()">追加</button>
+            <h2>TO DO List</h2>
+            <input type="text" id="new-task" placeholder="Add a new task">
+            <button onclick="addTask()">Add</button>
             <ul id="todo-list">
-                <!-- タスクをここに表示します -->
+                <!-- Tasks will be displayed here -->
             </ul>
         </section>
         <section id="notes">
-            <h2>メモ</h2>
-            <textarea id="note-area" placeholder="ここにメモを入力..."></textarea>
+            <h2>Notes</h2>
+            <textarea id="note-area" placeholder="Enter your notes here..."></textarea>
         </section>
         <section id="mindmap">
-            <h2>マインドマップ</h2>
-            <p><a href="https://www.mindmeister.com/app/folders" target="_blank">マインドマップを開く</a></p>
+            <h2>Mind Map</h2>
+            <p><a href="https://www.mindmeister.com/app/folders" target="_blank">Open Mind Map</a></p>
         </section>
     </main>
     <footer>
@@ -49,8 +64,8 @@
         // Blog Section
         const blogList = document.getElementById('blog-list');
         const blogs = [
-            { title: "スポーツ心理学の基礎", url: "https://note.com/yuma0509hand/" },
-            { title: "効果的なコーチング方法", url: "https://note.com/yuma0509hand/" }
+            { title: "Coaching Blog", url: "https://note.com/" },
+            { title: "Sports Psychology for Coaches", url: "https://note.com/yuma0509hand/m/mee004e7ea7cd" }
         ];
 
         blogs.forEach(blog => {
@@ -75,7 +90,7 @@
             });
 
             const deleteBtn = document.createElement('button');
-            deleteBtn.textContent = '削除';
+            deleteBtn.textContent = 'Delete';
             deleteBtn.addEventListener('click', () => {
                 li.remove();
             });
