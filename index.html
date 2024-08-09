@@ -3,9 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Yuma Mitsuishi's private site focusing on sports coaching, psychology, and leadership development.">
-    <meta name="keywords" content="sports coaching, sports psychology, leadership, athlete development">
-    <meta name="author" content="Yuma Mitsuishi">
     <title>yuma32 Private Site</title>
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -14,107 +11,137 @@
         <h1>yuma32 Private Site</h1>
         <nav>
             <ul>
-                <li><a href="#profile">About Me</a></li>
                 <li><a href="#blog">Blog</a></li>
-                <li><a href="#resources">Resources</a></li>
+                <li><a href="#todo">TO DO List</a></li>
+                <li><a href="#notes">Notes</a></li>
                 <li><a href="#mindmap">Mind Map</a></li>
                 <li><a href="#books">Books</a></li>
-                <li><a href="#faq">FAQ</a></li>
-                <li><a href="#feedback">Feedback</a></li>
-                <li><a href="#newsletter">Newsletter</a></li>
-                <li><a href="#social">Social Media</a></li>
+                <li>
+                    <a href="https://twitter.com/yuma0509_hand" target="_blank">
+                        <img src="twitter-icon.png" alt="Twitter" class="social-icon">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://x.gd/L0RIj" target="_blank">
+                        <img src="instagram-icon.png" alt="Instagram" class="social-icon">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.facebook.com/yuuma.mitsuishi" target="_blank">
+                        <img src="facebook-icon.png" alt="Facebook" class="social-icon">
+                    </a>
+                </li>
             </ul>
         </nav>
     </header>
+    <main>
+        <section id="blog">
+            <h2>Blog</h2>
+            <ul id="blog-list"></ul>
+        </section>
+        <section id="todo">
+            <h2>TO DO List</h2>
+            <input type="text" id="new-task" placeholder="Add a new task">
+            <button onclick="addTask()">Add</button>
+            <ul id="todo-list"></ul>
+        </section>
+        <section id="notes">
+            <h2>Notes</h2>
+            <textarea id="note-area" placeholder="Enter your notes here..."></textarea>
+        </section>
+        <section id="mindmap">
+            <h2>Mind Map</h2>
+            <p><a href="https://www.mindmeister.com/app/folders" target="_blank">Open Mind Map</a></p>
+        </section>
+        <section id="books">
+            <h2>Books</h2>
+            <h3>Recommended Books</h3>
+            <ul id="recommended-books-list"></ul>
+            <input type="text" id="new-recommended-book" placeholder="Add a recommended book URL">
+            <button onclick="addRecommendedBook()">Add</button>
 
-    <section id="profile">
-        <h2>About Me</h2>
-        <img src="your-photo-url.jpg" alt="Your Photo" style="width:150px; border-radius:50%;">
-        <p>Hello! I'm Yuma Mitsuishi, a sports coach and analyst. With a background in sports psychology, I focus on developing leadership and mental toughness in athletes. My mission is to help athletes reach their full potential both on and off the field.</p>
-    </section>
-
-    <section id="blog">
-        <h2>Blog</h2>
-        <p>Visit my blog: <a href="https://note.com/">Yuma's Blog</a></p>
-        <p>Read my article on Sports Psychology for Coaches: <a href="https://note.com/yuma0509hand/m/mee004e7ea7cd">Sports Psychology for Coaches</a></p>
-    </section>
-
-    <section id="mindmap">
-        <h2>Mind Map</h2>
-        <p>Access my mind maps: <a href="https://www.mindmeister.com/app/folders" target="_blank">MindMeister</a></p>
-    </section>
-
-    <section id="resources">
-        <h2>Useful Resources</h2>
-        <ul>
-            <li><a href="https://example.com/resource1" target="_blank">Resource 1</a></li>
-            <li><a href="https://example.com/resource2" target="_blank">Resource 2</a></li>
-            <li><a href="https://example.com/resource3" target="_blank">Resource 3</a></li>
-        </ul>
-    </section>
-
-    <section id="books">
-        <h2>Books</h2>
-        <h3>Recommended Books</h3>
-        <ul id="book-list">
-            <li><a href="https://example.com/book1" target="_blank">Book 1</a></li>
-            <li><a href="https://example.com/book2" target="_blank">Book 2</a></li>
-        </ul>
-
-        <h3>Books I Want to Read</h3>
-        <ul id="future-books-list">
-            <li><a href="https://example.com/book3" target="_blank">Book 3</a></li>
-            <li><a href="https://example.com/book4" target="_blank">Book 4</a></li>
-        </ul>
-    </section>
-
-    <section id="faq">
-        <h2>Frequently Asked Questions</h2>
-        <details>
-            <summary>What is sports psychology?</summary>
-            <p>Sports psychology is the study of how psychological factors influence sports, athletic performance, exercise, and physical activity.</p>
-        </details>
-        <details>
-            <summary>How can I improve my mental toughness?</summary>
-            <p>Mental toughness can be improved through consistent practice, goal setting, visualization, and working with a coach or psychologist.</p>
-        </details>
-    </section>
-
-    <section id="feedback">
-        <h2>Feedback</h2>
-        <form action="https://formspree.io/f/{your-form-id}" method="POST">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-            
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="_replyto" required>
-            
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" required></textarea>
-            
-            <button type="submit">Send Feedback</button>
-        </form>
-    </section>
-
-    <section id="newsletter">
-        <h2>Subscribe to Our Newsletter</h2>
-        <form action="https://example.com/newsletter-signup" method="POST">
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            <button type="submit">Subscribe</button>
-        </form>
-    </section>
-
-    <section id="social">
-        <h2>Follow Me on Social Media</h2>
-        <a href="https://twitter.com/yuma0509_hand" target="_blank"><img src="twitter-icon.png" alt="Twitter"></a>
-        <a href="https://x.gd/L0RIj" target="_blank"><img src="instagram-icon.png" alt="Instagram"></a>
-        <a href="https://www.facebook.com/yuuma.mitsuishi" target="_blank"><img src="facebook-icon.png" alt="Facebook"></a>
-    </section>
-
+            <h3>Books to Read</h3>
+            <ul id="books-to-read-list"></ul>
+            <input type="text" id="new-book-to-read" placeholder="Add a book to read URL">
+            <button onclick="addBookToRead()">Add</button>
+        </section>
+    </main>
     <footer>
-        <p>&copy; 2024 Yuma Mitsuishi. All rights reserved.</p>
+        <p>&copy; 2024 yuma32</p>
     </footer>
+    <script>
+        // Blog Section
+        const blogList = document.getElementById('blog-list');
+        const blogs = [
+            { title: "Coaching Blog", url: "https://note.com/" },
+            { title: "Sports Psychology for Coaches", url: "https://note.com/yuma0509hand/m/mee004e7ea7cd" }
+        ];
+
+        blogs.forEach(blog => {
+            const li = document.createElement('li');
+            const a = document.createElement('a');
+            a.href = blog.url;
+            a.textContent = blog.title;
+            li.appendChild(a);
+            blogList.appendChild(li);
+        });
+
+        // TO DO List Section
+        function addTask() {
+            const newTaskInput = document.getElementById('new-task');
+            const taskText = newTaskInput.value;
+            if (taskText === '') return;
+
+            const li = document.createElement('li');
+            li.textContent = taskText;
+            li.addEventListener('click', () => {
+                li.classList.toggle('completed');
+            });
+
+            const deleteBtn = document.createElement('button');
+            deleteBtn.textContent = 'Delete';
+            deleteBtn.addEventListener('click', () => {
+                li.remove();
+            });
+            li.appendChild(deleteBtn);
+
+            document.getElementById('todo-list').appendChild(li);
+            newTaskInput.value = '';
+        }
+
+        // Recommended Books Section
+        function addRecommendedBook() {
+            const newRecommendedBookInput = document.getElementById('new-recommended-book');
+            const bookURL = newRecommendedBookInput.value;
+            if (bookURL === '') return;
+
+            const li = document.createElement('li');
+            const a = document.createElement('a');
+            a.href = bookURL;
+            a.textContent = bookURL;
+            a.target = '_blank';
+            li.appendChild(a);
+
+            document.getElementById('recommended-books-list').appendChild(li);
+            newRecommendedBookInput.value = '';
+        }
+
+        // Books to Read Section
+        function addBookToRead() {
+            const newBookToReadInput = document.getElementById('new-book-to-read');
+            const bookURL = newBookToReadInput.value;
+            if (bookURL === '') return;
+
+            const li = document.createElement('li');
+            const a = document.createElement('a');
+            a.href = bookURL;
+            a.textContent = bookURL;
+            a.target = '_blank';
+            li.appendChild(a);
+
+            document.getElementById('books-to-read-list').appendChild(li);
+            newBookToReadInput.value = '';
+        }
+    </script>
 </body>
 </html>
-
